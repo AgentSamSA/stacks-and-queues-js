@@ -11,7 +11,7 @@ class Queue {
 	// remove an element from the queue
 	dequeue() {
 		if (this.isEmpty()) {
-			return "Underflow";
+			return "The queue is empty";
 		}
 		return this.items.shift();
 	}
@@ -53,8 +53,12 @@ class doubleStackQueue {
 	// removes an element from the queue
 	dequeue() {
 		if (this.popStack.length == 0) {
-			while (this.pushStack.length > 0) {
-				this.popStack.push(this.pushStack.pop())
+			if (this.pushStack.length == 0) {
+				return "Queue is empty";
+			} else {
+				while (this.pushStack.length > 0) {
+					this.popStack.push(this.pushStack.pop())
+				}
 			}
 		}
 		this.size--;

@@ -11,7 +11,7 @@ class Stack {
 	// remove the element at the top of the stack
 	pop(element) {
 		if (this.items.length == 0) {
-			return "Underflow";
+			return "The stack is empty";
 		}
 		return this.items.pop();
 	}
